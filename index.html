@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>夏目友人帐</title>
+		<style type="text/css">
+			body{
+				background-image: url(img/beijing.jpg);  /*添加背景*/
+				background-size: 100%;
+			}
+			.animate-box{
+				float: left;
+				margin-top: 35px;  
+				margin-left: 26px;
+			}
+			#logo{
+				float: left;
+			}
+			#xia img{
+				margin-top: 150px;
+				margin-left: 100px;
+			}
+			#yxia img{
+				margin-top: 250px;
+				margin-right: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fh5co-testimonial text-center animate-box">  <!--与下面的js相关联-->
+              <audio id="music" src="img/remember.mp3" loop autoplay></audio>
+              <figure> 
+              <img src="img/anniu.png" title="点击播放" width="50" height="50" onClick="play()" alt="user"> 
+              </figure>
+        </div>
+        
+        <img id="logo" src="img/logo.png" width="403" height="133" alt="图片未加载" title="点击虾条"/>
+       
+        <span id="xia">
+        	<a href="html/index1.html" target="_blank"><img src="img/xia.png" align="left" width="100" height="100" title="点我！点我！"/></a>
+        </span>
+        <span id="yxia">
+        	<a href="html/index2.html" target="_blank"><img src="img/yxia.png" align="right" width="100" height="100" title="点我！点我！"/></a>
+        </span>
+        
+        <!--JavaScript实现点击播放图标会进行播放音乐-->
+		<script>
+		window.onload = function(){ 
+		     var audio = document.getElementById('music');
+		         audio.pause();
+		}
+		function play() {
+		    var audio = document.getElementById('music');
+		    if (audio.paused) {
+		        audio.play();
+		    }
+		    else{
+		        audio.pause();
+		        audio.currentTime = 0;
+		    }
+		}
+	</script>
+	</body>
+</html>
